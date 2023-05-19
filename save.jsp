@@ -14,7 +14,7 @@
           try{
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection cn =DriverManager.getConnection("jdbc:mysql://localhost:3306/ecb","root","");
-                    PreparedStatement st = cn.prepareStatement("insert into details name=?,mobile=?,email=? where code=?");
+                    PreparedStatement st = cn.prepareStatement("update  details set name=?,mobile=?,email=? where code=?");
                     
                     st.setString(1,name);
                     st.setInt(2,mobile);
